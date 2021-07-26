@@ -10,7 +10,7 @@ function EntryScreen({ navigation }) {
 
       <View style={styles.logoContainer}>
         <Image style={styles.homeLogo} source={require('../assets/logo.png')}/>
-        <Text style={styles.appName}>App Name</Text>   
+        <Text style={styles.appName}>TriviAqua</Text>   
       </View>
    
       <View style={styles.bottomView}>
@@ -24,6 +24,7 @@ function EntryScreen({ navigation }) {
 const styles = StyleSheet.create({
     appName: {
       fontSize: 50,
+      color: 'deepskyblue',
       fontWeight: 'bold',
       textAlign: 'center',
       top: 300,
@@ -47,7 +48,7 @@ const styles = StyleSheet.create({
       lineHeight: 22,
       fontWeight: 'bold',
       letterSpacing: 0.3,
-      color: 'white',
+      color: color.white,
     },
     bottomView:{
       width: '100%', 

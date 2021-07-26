@@ -10,24 +10,17 @@ const state = {
 
 function HomeScreen({ navigation }) {
 
-    const unknownRef = useRef();
-    const homeRef = useRef();
-    const questionsRef = useRef();
-    const view = useRef();
 
     return (
         <View style={styles.background}>
-            <View>
-                <Text>Hello</Text>
-            </View>
-            <View style={styles.bottomBar} ref={view}>
-                <Pressable ref={unknownRef} style={styles.pressibleButton} onPress={() => navigation.navigate('EntryScreen')}>
+            <View style={styles.bottomBar}>
+                <Pressable style={styles.pressibleButton} onPress={() => navigation.navigate('EntryScreen')}>
                     <Image style={styles.unknownImage} source={require('../assets/unknown.png')} />
                 </Pressable>
-                <Pressable ref={homeRef} style={styles.pressibleButton} onPress={() => console.log("Pressed")}>
+                <Pressable style={styles.pressibleButton} onPress={() => console.log("Pressed")}>
                     <Image style={styles.unknownImage} source={require('../assets/home.png')} />
                 </Pressable>
-                <Pressable ref={questionsRef} style={styles.pressibleButton} onPress={() => console.log("Pressed")}>
+                <Pressable style={styles.pressibleButton} onPress={() => console.log("Pressed")}>
                     <Image style={styles.unknownImage} source={require('../assets/questions.png')} />
                 </Pressable>
             </View>
@@ -49,12 +42,16 @@ const styles = StyleSheet.create({
         bottom:0,
         flexDirection: 'row',
         justifyContent: 'space-around',
+        alignContent: 'center',
     },
     unknownImage: {
-        opacity: state.opacity
+        opacity: state.opacity,
+        height:65,
+        width:65,
+        resizeMode: 'contain',
     },
     pressibleButton: {
-        top: 30,
+        top: 15,
     },
 })
 
